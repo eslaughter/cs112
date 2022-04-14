@@ -29,7 +29,8 @@ public class OctorayList extends Critter {
             for (int j = getY() - sz; j < getY() + sz; j++){
                 int x = Math.floorMod(i, getWidth());
                 int y = Math.floorMod(j, getHeight());
-                if (isEnemy(grid[x][y])) nearby += grid[x][y]; 
+                if (isEnemy(grid[x][y]))
+                    nearby += grid[x][y];
             }
         }
         return Direction.CENTER;
